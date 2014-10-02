@@ -11,12 +11,12 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/dist\/js\/jquery.bootstrap-responsive-tabs-min.js": {
+	"\/dist\/js\/jquery.bootstrap-responsive-tabs.min.js": {
 		"fileType": 64,
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/dist\/js\/jquery.bootstrap-responsive-tabs-min.js",
-		"outputAbbreviatedPath": "\/dist\/js\/min\/jquery.bootstrap-responsive-tabs-min-min.js",
+		"inputAbbreviatedPath": "\/dist\/js\/jquery.bootstrap-responsive-tabs.min.js",
+		"outputAbbreviatedPath": "\/dist\/js\/min\/jquery.bootstrap-responsive-tabs.min-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
@@ -30,17 +30,6 @@
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
-		},
-	"\/jquery.bootstrap-responsive-tabs.min.js": {
-		"fileType": 64,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/jquery.bootstrap-responsive-tabs.min.js",
-		"outputAbbreviatedPath": "\/min\/jquery.bootstrap-responsive-tabs.min-min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
 		},
 	"\/less\/bootstrap-responsive-tabs.less": {
 		"allowInsecureImports": 0,
@@ -62,13 +51,22 @@
 		"strictMath": 0,
 		"strictUnits": 0
 		},
+	"\/README.html": {
+		"fileType": 8192,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/README.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/README.md": {
 		"enableFootnoteSupport": 0,
 		"enableSmartyPants": 1,
 		"expandTabs": 1,
 		"fileType": 4096,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
+		"ignore": 1,
+		"ignoreWasSetByUser": 1,
 		"inputAbbreviatedPath": "\/README.md",
 		"outputAbbreviatedPath": "\/README.html",
 		"outputPathIsOutsideProject": 0,

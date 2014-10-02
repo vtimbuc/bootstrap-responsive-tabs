@@ -1,6 +1,23 @@
 bootstrap-responsive-tabs
 =========================
 
-"Bootstrap Responsive Tabs" is a simple jQuery plugin that switches the default bootstrap tabs to collapsible components (accordions) on the viewports that you choose to.
+"Bootstrap Responsive Tabs" is a simple jQuery plugin that switches the default bootstrap tabs to accordions on the viewports that you choose to.
 
 Demo: http://vtimbuc.github.io/bootstrap-responsive-tabs/
+
+
+### How to use it
+<p>Load the required css file in <code>&lt;head&gt;</code> and js file before <code>&lt;/body&gt;</code>:</p>
+
+<pre>
+<link rel="stylesheet" href="dist/css/bootstrap-responsive-tabs.css">
+<script src="dist/js/jquery.bootstrap-responsive-tabs.min.js"></script>
+</pre>
+
+<p>Then call the plugin:</p>
+
+<pre>
+$('.responsive-tabs').responsiveTabs({
+  accordionOn: ['xs', 'sm'] // xs, sm, md, lg
+});
+</pre>
