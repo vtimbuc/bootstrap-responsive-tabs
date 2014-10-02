@@ -22,7 +22,7 @@ $('.responsive-tabs').responsiveTabs({
 });
 ```
 
-<p>The tabs markup is the same as bootstrap's, you only need to add a class to <code>.nav-tabs</code>:</p>
+<p>The tabs markup is the same as bootstrap's without the data-toggle attribute, you only need to add a class to <code>.nav-tabs</code>:</p>
 
 ``` html
 <ul class="nav nav-tabs responsive-tabs">
