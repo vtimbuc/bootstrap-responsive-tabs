@@ -1,80 +1,113 @@
 /*
- * jQuery Bootstrap Responsive Tabs v1.0.0
+ * jQuery Bootstrap Responsive Tabs v2.0.0
  * github.com/vtimbuc/bootstrap-responsive-tabs
  *
- * Copyright 2013 Valeriu Timbuc
+ * Copyright 2014 Valeriu Timbuc
  * vtimbuc.com
  */
 
 ;(function($) {
-	
+
+  "use strict";
+
 	var defaults = {
-		collapseOn: ['xs']
-	}
+		accordionOn: ['xs']
+	};
 
 	$.fn.responsiveTabs = function(options) {
 
 		var config = $.extend({}, defaults, options),
-			hidden = '',
-			visible = '';
+        accordion = '';
 
-		$.each(config.collapseOn, function(index, value) {
-			hidden  += ' hidden-' + value;
-			visible += ' visible-' + value;
+		$.each(config.accordionOn, function(index, value) {
+			accordion += ' accordion-' + value;
 		});
-		
-		return this.each(function() {
-			
-			var $this = $(this),
-				$tabLinks = $this.find('.nav-tabs > li > a'),
-				id = 'collapse-' + $this.children('.nav-tabs').attr('id'),
-				$collapse = $('<div/>', {
-					'class': 'panel-group' + visible,
-					'id': id
-				});
 
-			$.each($tabLinks, function() {
+    return this.each(function() {
 
-				var $this = $(this),
-					tab_id = $this.attr('href').replace(/#/g, ''),
-					activeTab = '';
+      var $self = $(this),
+          $navTabs = $self.find('> li > a'),
+          $tabContent = $($navTabs.first().attr('href')).parent('.tab-content'),
+          $tabs = $tabContent.children('.tab-pane');
 
-				if ($this.parent('li').hasClass('active')) {
-					activeTab = ' in';
-				}
+      // Wrap the tabs
+      $self.add($tabContent).wrapAll('<div class="responsive-tabs-container" />');
 
-				var $collapseHeading = $('<div/>', { 'class': 'panel-heading' }).html(
-						$('<h4/>', { 'class': 'panel-title' }).html(
-							$('<a/>', {
-								'data-toggle': 'collapse',
-								'data-parent': '#' + id,
-								'href': '#collapse-' + tab_id,
-								'html': $this.html()
-							})
-						)
-					),
+      var $container = $self.parent('.responsive-tabs-container');
 
-					$collapseContent = $('<div/>', {
-						'class': 'panel-collapse collapse' + activeTab,
-						'id': 'collapse-' + tab_id
-					}).html(
-						$('<div/>', {
-							'class': 'panel-body',
-							'html': $('#' + tab_id).html()
-						})
-					),
+      $container.addClass(accordion);
 
-					$collapseItem = $('<div/>', { 'class': 'panel panel-default' }).append($collapseHeading, $collapseContent);
+      // Duplicate links for accordion
+      $navTabs.each(function(i) {
+        var $this = $(this),
+            id = $this.attr('href'),
+            active = '',
+            first = '',
+            last = '';
 
-				$collapseItem.appendTo($collapse);
+        // Add active class
+        if ($this.parent('li').hasClass('active')) {
+          active = ' active';
+        }
 
-			});
+        // Add first class
+        if (i === 0) {
+          first = ' first';
+        }
 
-			$collapse.insertAfter($this);
+        // Add last class
+        if (i === $navTabs.length - 1) {
+          last = ' last';
+        }
 
-			$this.addClass(hidden);
-		
-		});
+        $this.clone(false).addClass('accordion-link' + active + first + last).insertBefore(id);
+      });
+
+      var $accordionLinks = $tabContent.children('.accordion-link');
+
+      // Tabs Click Event
+      $navTabs.on('click', function(event) {
+        event.preventDefault();
+
+        var $this = $(this),
+            $li = $this.parent('li'),
+            $siblings = $li.siblings('li'),
+            id = $this.attr('href'),
+            $accordionLink = $tabContent.children('a[href="' + id + '"]');
+
+        if (!$li.hasClass('active')) {
+          $li.addClass('active');
+          $siblings.removeClass('active');
+
+          $tabs.removeClass('active');
+          $(id).addClass('active');
+
+          $accordionLinks.removeClass('active');
+          $accordionLink.addClass('active');
+        }
+      });
+
+      // Accordion Click Event
+      $accordionLinks.on('click', function(event) {
+        event.preventDefault();
+
+        var $this = $(this),
+            id = $this.attr('href'),
+            $tabLink = $self.find('li > a[href="' + id + '"]').parent('li');
+
+        if (!$this.hasClass('active')) {
+          $accordionLinks.removeClass('active');
+          $this.addClass('active');
+
+          $tabs.removeClass('active');
+          $(id).addClass('active');
+
+          $navTabs.parent('li').removeClass('active');
+          $tabLink.addClass('active');
+        }
+      });
+
+    });
 
 	};
 

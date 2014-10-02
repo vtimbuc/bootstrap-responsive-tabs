@@ -1,0 +1,54 @@
+.responsive-tabs-container {
+
+  // Accordion Styles
+  &[class*="accordion-"] {
+    .tab-pane {
+      margin-bottom: 15px;
+    }
+
+    .accordion-link {
+      display: none;
+      margin-bottom: 10px;
+      padding: 10px 15px;
+      background-color: #f5f5f5;
+      border-radius: 3px;
+      border: 1px solid #ddd;
+      color: #333;
+    }
+  }
+
+  // Accordion media queries
+  .accordion-toggle() {
+    .nav-tabs {
+      display: none;
+    }
+
+    .accordion-link {
+      display: block;
+    }
+  }
+
+  @media (max-width: 767px) {
+    &.accordion-xs {
+      .accordion-toggle();
+    }
+  }
+
+  @media (min-width: 768px) and (max-width: 991px) {
+    &.accordion-sm {
+      .accordion-toggle();
+    }
+  }
+
+  @media (min-width: 992px) and (max-width: 1199px) {
+    &.accordion-md {
+      .accordion-toggle();
+    }
+  }
+
+  @media (min-width: 1200px) {
+    &.accordion-lg {
+      .accordion-toggle();
+    }
+  }
+}
