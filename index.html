@@ -8,7 +8,7 @@
 
   <!-- Bootstrap Styles -->
   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.1/css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="dist/css/bootstrap-responsive-tabs.css">
 
   <style>
   body { padding: 50px 0; }
@@ -22,46 +22,86 @@
 <body>
 
 <div class="container">
-  <!-- <div class="jumbotron">
+  <div class="jumbotron">
   <h1>Bootstrap Responsive Tabs</h1>
-  <p>This is a simple jQuery plugin that switches the default bootstrap tabs to collapsible components (accordions) on the viewports that you choose to. It was build using default Bootstrap 3 classes and markup.</p>
+  <p><br>This is a simple jQuery plugin that switches the default bootstrap tabs to accordions on the viewports that you choose to. It was build using default Bootstrap 3 classes and markup.</p>
+  <p>
+  <br>
+  <iframe src="http://ghbtns.com/github-btn.html?user=vtimbuc&repo=bootstrap-responsive-tabs&type=watch"
+  allowtransparency="true" frameborder="0" scrolling="0" width="62" height="20"></iframe>
+  <iframe src="http://ghbtns.com/github-btn.html?user=vtimbuc&repo=bootstrap-responsive-tabs&type=fork"
+  allowtransparency="true" frameborder="0" scrolling="0" width="62" height="20"></iframe>
+  </p>
   </div>
 
   <div class="alert alert-info">
   <p><strong>Note:</strong> Resize your browser window to see how it works.</p>
-  </div> -->
+  </div>
 
-  <h3>Responsive Tabs</h3>
+  <div class="row">
+    <div class="col-sm-6">
+      <h3>Responsive Tabs</h3>
 
-  <ul class="nav nav-tabs responsive-tabs" id="tabs1">
-    <li class="active"><a href="#home1">Home</a></li>
-    <li><a href="#profile1">Profile</a></li>
-    <li><a href="#messages1">Messages</a></li>
-    <li><a href="#settings1">Settings</a></li>
-  </ul>
+      <ul class="nav nav-tabs responsive-tabs">
+        <li class="active"><a href="#home1">Home</a></li>
+        <li><a href="#profile1">Profile</a></li>
+        <li><a href="#messages1">Messages</a></li>
+        <li><a href="#settings1">Settings</a></li>
+      </ul>
 
-  <div class="tab-content">
-    <div class="tab-pane active" id="home1">
-      <p>1. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, commodi delectus accusamus optio quam odit illum laudantium dolorum nostrum recusandae corporis quo. Veniam, excepturi illo eveniet quas aperiam provident inventore.</p>
+      <div class="tab-content">
+        <div class="tab-pane active" id="home1">
+          <p>1. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, commodi delectus accusamus optio quam odit illum laudantium dolorum nostrum recusandae corporis quo. Veniam, excepturi illo eveniet quas aperiam provident inventore.</p>
+        </div>
+
+        <div class="tab-pane" id="profile1">
+          <p>2. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, commodi delectus accusamus optio quam odit illum laudantium dolorum nostrum recusandae corporis quo. Veniam, excepturi illo eveniet quas aperiam provident inventore.</p>
+        </div>
+
+        <div class="tab-pane" id="messages1">
+          <p>3. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, commodi delectus accusamus optio quam odit illum laudantium dolorum nostrum recusandae corporis quo. Veniam, excepturi illo eveniet quas aperiam provident inventore.</p>
+        </div>
+
+        <div class="tab-pane" id="settings1">
+          <p>4. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, commodi delectus accusamus optio quam odit illum laudantium dolorum nostrum recusandae corporis quo. Veniam, excepturi illo eveniet quas aperiam provident inventore.</p>
+        </div>
+      </div>
     </div>
 
-    <div class="tab-pane" id="profile1">
-      <p>2. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, commodi delectus accusamus optio quam odit illum laudantium dolorum nostrum recusandae corporis quo. Veniam, excepturi illo eveniet quas aperiam provident inventore.</p>
-    </div>
+    <div class="col-sm-6">
+      <h3>Default Tabs</h3>
 
-    <div class="tab-pane" id="messages1">
-      <p>3. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, commodi delectus accusamus optio quam odit illum laudantium dolorum nostrum recusandae corporis quo. Veniam, excepturi illo eveniet quas aperiam provident inventore.</p>
-    </div>
+      <ul class="nav nav-tabs">
+        <li class="active"><a href="#home1">Home</a></li>
+        <li><a href="#profile2">Profile</a></li>
+        <li><a href="#messages2">Messages</a></li>
+        <li><a href="#settings2">Settings</a></li>
+      </ul>
 
-    <div class="tab-pane" id="settings1">
-      <p>4. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, commodi delectus accusamus optio quam odit illum laudantium dolorum nostrum recusandae corporis quo. Veniam, excepturi illo eveniet quas aperiam provident inventore.</p>
+      <div class="tab-content">
+        <div class="tab-pane active" id="home2">
+          <p>1. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, commodi delectus accusamus optio quam odit illum laudantium dolorum nostrum recusandae corporis quo. Veniam, excepturi illo eveniet quas aperiam provident inventore.</p>
+        </div>
+
+        <div class="tab-pane" id="profile2">
+          <p>2. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, commodi delectus accusamus optio quam odit illum laudantium dolorum nostrum recusandae corporis quo. Veniam, excepturi illo eveniet quas aperiam provident inventore.</p>
+        </div>
+
+        <div class="tab-pane" id="messages2">
+          <p>3. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, commodi delectus accusamus optio quam odit illum laudantium dolorum nostrum recusandae corporis quo. Veniam, excepturi illo eveniet quas aperiam provident inventore.</p>
+        </div>
+
+        <div class="tab-pane" id="settings2">
+          <p>4. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, commodi delectus accusamus optio quam odit illum laudantium dolorum nostrum recusandae corporis quo. Veniam, excepturi illo eveniet quas aperiam provident inventore.</p>
+        </div>
+      </div>
     </div>
   </div>
 </div>
 
 <!-- jQuery & Bootstrap JS -->
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-<script src="jquery.bootstrap-responsive-tabs.js"></script>
+<script src="dist/js/jquery.bootstrap-responsive-tabs.min.js"></script>
 
 <script>
 $('.responsive-tabs').responsiveTabs({
