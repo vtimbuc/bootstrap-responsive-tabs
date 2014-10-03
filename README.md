@@ -40,3 +40,5 @@ $('.responsive-tabs').responsiveTabs({
   </div>
 </div>
 ```
+
+[jsFiddle demo](http://jsfiddle.net/r40qvmww/embedded/result/)
