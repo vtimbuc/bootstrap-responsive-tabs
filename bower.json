@@ -1,0 +1,21 @@
+{
+  "name": "jquery.bootstrap-responsive-tabs",
+  "version": "1.0.0",
+  "main": [
+    "dist/js/jquery.bootstrap-responsive-tabs.min.js",
+    "dist/css/bootstrap-responsive-tabs.css"
+  ],
+  "dependencies": {
+    "jquery": ">=1.8"
+  },
+  "ignore": [
+    "test",
+    ".*",
+    "*.json",
+    "*.md",
+    "*.txt",
+    "Gruntfile.js",
+    "src",
+    "less"
+  ]
+}
