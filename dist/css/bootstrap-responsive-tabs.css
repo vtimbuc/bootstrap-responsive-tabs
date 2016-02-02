@@ -1,7 +1,12 @@
-.responsive-tabs-container[class*="accordion-"] .tab-pane {
+/*
+ * jQuery Bootstrap Responsive Tabs v2.0.1 | Valeriu Timbuc - vtimbuc.com
+ * github.com/vtimbuc/bootstrap-responsive-tabs
+ * @license WTFPL http://www.wtfpl.net/about/
+ */
+.responsive-tabs-container .tab-pane {
   margin-bottom: 15px;
 }
-.responsive-tabs-container[class*="accordion-"] .accordion-link {
+.responsive-tabs-container .accordion-link {
   display: none;
   margin-bottom: 10px;
   padding: 10px 15px;
@@ -42,4 +47,3 @@
     display: block;
   }
 }
-/*# sourceMappingURL=bootstrap-responsive-tabs.css.map */

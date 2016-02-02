@@ -1,6 +1,8 @@
 {
   "name": "jquery.bootstrap-responsive-tabs",
-  "version": "1.0.0",
+  "homepage": "http://vtimbuc.github.io/bootstrap-responsive-tabs/",
+  "license": "WTFPL",
+  "version": "2.0.1",
   "main": [
     "dist/js/jquery.bootstrap-responsive-tabs.min.js",
     "dist/css/bootstrap-responsive-tabs.css"

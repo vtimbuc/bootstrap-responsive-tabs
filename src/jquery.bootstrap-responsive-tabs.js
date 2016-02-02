@@ -1,9 +1,7 @@
 /*
- * jQuery Bootstrap Responsive Tabs v2.0.0
+ * jQuery Bootstrap Responsive Tabs v2.0.1 | Valeriu Timbuc - vtimbuc.com
  * github.com/vtimbuc/bootstrap-responsive-tabs
- *
- * Copyright 2014 Valeriu Timbuc
- * vtimbuc.com
+ * @license WTFPL http://www.wtfpl.net/about/
  */
 
 ;(function($) {
@@ -11,19 +9,19 @@
   "use strict";
 
 	var defaults = {
-		accordionOn: ['xs']
+		accordionOn: ['xs'] // xs, sm, md, lg
 	};
 
-	$.fn.responsiveTabs = function(options) {
+	$.fn.responsiveTabs = function (options) {
 
 		var config = $.extend({}, defaults, options),
         accordion = '';
 
-		$.each(config.accordionOn, function(index, value) {
+		$.each(config.accordionOn, function (index, value) {
 			accordion += ' accordion-' + value;
 		});
 
-    return this.each(function() {
+    return this.each(function () {
 
       var $self = $(this),
           $navTabs = $self.find('> li > a'),
@@ -38,7 +36,7 @@
       $container.addClass(accordion);
 
       // Duplicate links for accordion
-      $navTabs.each(function(i) {
+      $navTabs.each(function (i) {
         var $this = $(this),
             id = $this.attr('href'),
             active = '',
@@ -66,7 +64,7 @@
       var $accordionLinks = $tabContent.children('.accordion-link');
 
       // Tabs Click Event
-      $navTabs.on('click', function(event) {
+      $navTabs.on('click', function (event) {
         event.preventDefault();
 
         var $this = $(this),
@@ -88,7 +86,7 @@
       });
 
       // Accordion Click Event
-      $accordionLinks.on('click', function(event) {
+      $accordionLinks.on('click', function (event) {
         event.preventDefault();
 
         var $this = $(this),
