@@ -1,6 +1,6 @@
 {
   "name": "bootstrap-responsive-tabs",
-  "version": "2.0.1",
+  "version": "2.0.3",
   "description": "A simple jQuery plugin that switches the default bootstrap tabs to accordions on the viewports that you choose to.",
   "main": "dist/js/jquery.bootstrap-responsive-tabs.min.js",
   "repository": {
@@ -18,5 +18,5 @@
   "bugs": {
     "url": "https://github.com/vtimbuc/bootstrap-responsive-tabs/issues"
   },
-  "homepage": "http://vtimbuc.github.io/bootstrap-responsive-tabs/",
+  "homepage": "http://vtimbuc.github.io/bootstrap-responsive-tabs/"
 }
